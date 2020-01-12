@@ -1,0 +1,25 @@
+{
+  "name": "system-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "(npm install); (cd app && npm install)",
+    "start": "node ./index.js",
+    "server": "nodemon ./index.js",
+    "client": "npm run start --prefix ./app",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruce",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-koa": "^2.9.7",
+    "graphql": "^14.5.8",
+    "systeminformation": "^4.14.17"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^1.19.4"
+  }
+}
